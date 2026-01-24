@@ -1,98 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Cloud Storage Manager</title>
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 60%;
-            margin: 20px auto;
-            font-family: Arial, sans-serif;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 10px;
-            text-align: center;
-        }
-        th {
-            background-color: #4CAF50;
-            color: white;
-        }
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-    </style>
+    <title>Mail ID Manager</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h2 style="text-align:center;">Mail ID Details</h2>
+<h2>Mail ID Details</h2>
+
+<form id="mailForm">
+    <input type="email" name="email" placeholder="Email ID" required>
+    <input type="text" name="dropbox" placeholder="Dropbox">
+    <input type="text" name="google_drive" placeholder="Google Drive">
+    <input type="text" name="one_drive" placeholder="One Drive">
+    <input type="text" name="mega" placeholder="Mega">
+    <button type="submit">Save</button>
+</form>
 
 <table>
-    <tr>
-        <th>Sl. No.</th>
-        <th>Email ID</th>
-        <th>Dropbox</th>
-        <th>Google Drive</th>
-        <th>One Drive</th>
-        <th>Mega</th>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>arikmukherjee3@gmail.com</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>17.51(20GB)</td>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>arikmukherjee.edu@gmail.com</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>arikmukherjee2022@gmail.com</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>4</td>
-        <td>arikmukherjee.code@gmail.com</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>5</td>
-        <td>crackgate27@gmail.com</td>
-        <td></td>
-        <td>11.69(15GB)</td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>6</td>
-        <td>a6638150@gmail.com</td>
-        <td>NA</td>
-        <td>12.45(15GB)</td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>7</td>
-        <td>arik.wbsu.cs@gmail.com</td>
-        <td>NA</td>
-        <td></td>
-        <td>NA</td>
-        <td>NA</td>
-    </tr>
+    <thead>
+        <tr>
+            <th>Sl</th>
+            <th>Email</th>
+            <th>Dropbox</th>
+            <th>Google Drive</th>
+            <th>One Drive</th>
+            <th>Mega</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody id="dataBody"></tbody>
 </table>
 
+<script src="script.js"></script>
 </body>
 </html>
